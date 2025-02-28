@@ -1,24 +1,25 @@
 <?php
+
 namespace App\View\Components;
 
+use Closure;
+use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class Breadcrumbs extends Component
 {
-    public array $breadcrumbs;
-
     /**
-     * Создание нового компонента.
+     * Create a new component instance.
      */
-    public function __construct(array $breadcrumbs = [])
+    public function __construct()
     {
-        $this->breadcrumbs = $breadcrumbs;
+        //
     }
 
     /**
-     * Получение представления компонента.
+     * Get the view / contents that represent the component.
      */
-    public function render()
+    public function render(): View|Closure|string
     {
         return view('components.breadcrumbs');
     }

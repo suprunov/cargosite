@@ -3,19 +3,23 @@
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [PageController::class, 'home'])->name('home');
-Route::get('/about', [PageController::class, 'about'])->name('about');
-Route::get('/additional-products', [PageController::class, 'additionalProducts'])->name('additionalProducts');
-Route::get('/additional-services', [PageController::class, 'additionalServices'])->name('additionalServices');
-Route::get('/career', [PageController::class, 'career'])->name('career');
-Route::get('/career/{slug}', [PageController::class, 'vacancy'])->name('vacancy');
-Route::get('/cargo-fuel', [PageController::class, 'cargoFuel'])->name('cargoFuel');
-Route::get('/fuel', [PageController::class, 'fuel'])->name('fuel');
-Route::get('/fuel-cards', [PageController::class, 'fuelCards'])->name('fuelCards');
-Route::get('/contacts', [PageController::class, 'contacts'])->name('contacts');
-Route::get('/docs', [PageController::class, 'docs'])->name('docs');
-Route::get('/news', [PageController::class, 'news'])->name('news');
-Route::get('/news/{slug}', [PageController::class, 'newsDetail'])->name('newsDetail');
-Route::get('/services', [PageController::class, 'repairCenters'])->name('repairCenters');
-Route::get('/services/{slug}', [PageController::class, 'repairCenterDetail'])->name('repairCenterDetail');
-Route::get('/suppliers', [PageController::class, 'suppliers'])->name('suppliers');
+Route::get('/', [PageController::class, 'homeIndex'])->name('homeIndex');
+Route::get('/about', [PageController::class, 'aboutIndex'])->name('aboutIndex');
+Route::get('/contacts', [PageController::class, 'contactsIndex'])->name('contactsIndex');
+Route::get('/documentation', [PageController::class, 'documentationIndex'])->name('documentationIndex');
+
+Route::prefix('fuel')->group(function () {
+    Route::get('/', [PageController::class, 'fuelIndex'])->name('fuelIndex');
+    Route::get('/about', [PageController::class, 'fuelAbout'])->name('fuelAbout');
+    Route::get('/adblue', [PageController::class, 'fuelAdblue'])->name('fuelAdblue');
+    Route::get('/cards', [PageController::class, 'fuelCards'])->name('fuelCards');
+    Route::get('/relatedProducts', [PageController::class, 'fuelRelatedProducts'])->name('fuelRelatedProducts');
+    Route::get('/relatedServices', [PageController::class, 'fuelRelatedServices'])->name('fuelRelatedServices');
+    Route::get('/services', [PageController::class, 'fuelServices'])->name('fuelServices');
+});
+
+Route::get('/news', [PageController::class, 'newsIndex'])->name('newsIndex');
+Route::get('/policy', [PageController::class, 'policyIndex'])->name('policyIndex');
+Route::get('/suppliers', [PageController::class, 'suppliersIndex'])->name('suppliersIndex');
+Route::get('/vacancies', [PageController::class, 'vacanciesIndex'])->name('vacanciesIndex');
+Route::get('/vacancies/{slug}', [PageController::class, 'vacanciesVacancy'])->name('vacanciesVacancy');

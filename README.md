@@ -292,7 +292,7 @@ build: {
 Для работы с HTML в Vite используйте встроенные возможности для шаблонов. Например, если у вас есть Blade-шаблоны и вам нужно вставить скомпилированные файлы JS и CSS:
 
 ```blade
-<!-- resources/views/layouts/app.blade.php -->
+<!-- resources/views/layouts/app -->
 @vite(['resources/js/app.js', 'resources/css/app.css'])
 ```
 
@@ -558,3 +558,176 @@ export default defineConfig({
 });
 
 ```
+
+Конечно, вот дополненный и расширенный список **artisan-команд**, включая все основные команды Laravel, сгруппированные по категориям:
+
+---
+
+## **Полный список Artisan команд (Laravel 11)**
+
+### **Базовые команды**
+| Команда | Описание | Пример |
+|---|---|---|
+| list | Список всех команд | `php artisan list` |
+| help | Справка по команде | `php artisan help migrate` |
+| about | Информация о приложении | `php artisan about` |
+| inspire | Показать цитату | `php artisan inspire` |
+| version | Версия Laravel | `php artisan --version` |
+
+---
+
+### **Управление приложением**
+| Команда | Описание | Пример |
+|---|---|---|
+| up | Выход из режима обслуживания | `php artisan up` |
+| down | Режим обслуживания | `php artisan down --secret=12345` |
+| env | Текущая среда | `php artisan env` |
+| key:generate | Генерация ключа | `php artisan key:generate --show` |
+| optimize | Оптимизация кэша | `php artisan optimize` |
+| optimize:clear | Очистка кэша | `php artisan optimize:clear` |
+
+---
+
+### **Конфигурация**
+| Команда | Описание | Пример |
+|---|---|---|
+| config:cache | Кэш конфигурации | `php artisan config:cache` |
+| config:clear | Очистка кэша конфигурации | `php artisan config:clear` |
+| config:show | Показать значение конфига | `php artisan config:show app.name` |
+
+---
+
+### **Миграции и База данных**
+| Команда | Описание | Пример |
+|---|---|---|
+| migrate | Выполнить миграции | `php artisan migrate --step` |
+| migrate:fresh | Полный сброс и миграция | `php artisan migrate:fresh` |
+| migrate:refresh | Откат и повтор миграций | `php artisan migrate:refresh` |
+| migrate:reset | Откат всех миграций | `php artisan migrate:reset` |
+| migrate:rollback | Откат последних миграций | `php artisan migrate:rollback --step=2` |
+| migrate:status | Статус миграций | `php artisan migrate:status` |
+| db:seed | Запуск сидеров | `php artisan db:seed --class=UserSeeder` |
+| db:wipe | Очистка базы | `php artisan db:wipe` |
+
+---
+
+### **Очереди**
+| Команда | Описание | Пример |
+|---|---|---|
+| queue:clear | Очистка очереди | `php artisan queue:clear database` |
+| queue:failed | Просмотр упавших задач | `php artisan queue:failed` |
+| queue:flush | Очистка таблицы failed_jobs | `php artisan queue:flush` |
+| queue:forget | Удалить конкретную failed-задачу | `php artisan queue:forget 5` |
+| queue:listen | Запуск обработчика очереди | `php artisan queue:listen` |
+| queue:monitor | Мониторинг размера очереди | `php artisan queue:monitor database` |
+| queue:prune-batches | Удалить старые батчи | `php artisan queue:prune-batches` |
+| queue:prune-failed | Удалить старые failed-задачи | `php artisan queue:prune-failed` |
+| queue:restart | Перезапуск обработчиков очереди | `php artisan queue:restart` |
+| queue:retry | Повтор failed-задачи | `php artisan queue:retry 5` |
+| queue:work | Обработка очереди | `php artisan queue:work` |
+
+---
+
+### **Кэширование**
+| Команда | Описание | Пример |
+|---|---|---|
+| cache:clear | Очистить весь кэш | `php artisan cache:clear` |
+| cache:forget | Удалить ключ из кэша | `php artisan cache:forget cache_key` |
+| cache:table | Создать миграцию для кеша | `php artisan cache:table` |
+
+---
+
+### **Логи**
+| Команда | Описание | Пример |
+|---|---|---|
+| pail | Логи в реальном времени | `php artisan pail --lines=50` |
+
+---
+
+### **Создание файлов (make)**
+| Команда | Описание | Пример |
+|---|---|---|
+| make:cast | Создать каст | `php artisan make:cast CustomCast` |
+| make:channel | Создать канал | `php artisan make:channel OrderChannel` |
+| make:command | Создать команду | `php artisan make:command CustomCommand` |
+| make:component | Создать компонент | `php artisan make:component Alert` |
+| make:controller | Создать контроллер | `php artisan make:controller PostController --resource` |
+| make:event | Создать событие | `php artisan make:event OrderShipped` |
+| make:exception | Создать исключение | `php artisan make:exception CustomException` |
+| make:factory | Создать фабрику | `php artisan make:factory UserFactory` |
+| make:job | Создать задачу | `php artisan make:job ProcessOrder` |
+| make:listener | Создать слушателя | `php artisan make:listener SendOrderNotification` |
+| make:mail | Создать письмо | `php artisan make:mail OrderShipped` |
+| make:middleware | Создать middleware | `php artisan make:middleware CheckAge` |
+| make:migration | Создать миграцию | `php artisan make:migration create_posts_table` |
+| make:model | Создать модель | `php artisan make:model Post -mcsf` |
+| make:notification | Создать уведомление | `php artisan make:notification InvoicePaid` |
+| make:observer | Создать наблюдатель | `php artisan make:observer PostObserver --model=Post` |
+| make:policy | Создать политику | `php artisan make:policy PostPolicy --model=Post` |
+| make:provider | Создать сервис-провайдер | `php artisan make:provider CustomServiceProvider` |
+| make:request | Создать реквест | `php artisan make:request StorePostRequest` |
+| make:resource | Создать ресурс API | `php artisan make:resource PostResource` |
+| make:rule | Создать кастомное правило | `php artisan make:rule ValidUserRole` |
+| make:seeder | Создать сидер | `php artisan make:seeder PostSeeder` |
+| make:test | Создать тест | `php artisan make:test PostTest` |
+
+---
+
+### **Тестирование**
+| Команда | Описание | Пример |
+|---|---|---|
+| test | Запуск тестов | `php artisan test` |
+
+---
+
+### **Сессии**
+| Команда | Описание | Пример |
+|---|---|---|
+| session:table | Создать таблицу для сессий | `php artisan session:table` |
+
+---
+
+### **Шифрование**
+| Команда | Описание | Пример |
+|---|---|---|
+| encrypt | Зашифровать строку | `php artisan encrypt "secret-data"` |
+| decrypt | Расшифровать строку | `php artisan decrypt "encrypted-data"` |
+
+---
+
+### **Хранилище (storage)**
+| Команда | Описание | Пример |
+|---|---|---|
+| storage:link | Создать симлинк storage/app/public в public | `php artisan storage:link` |
+
+---
+
+### **Документация по командам**
+| Команда | Описание | Пример |
+|---|---|---|
+| docs | Открыть документацию Laravel | `php artisan docs` |
+
+---
+
+### **События и слушатели**
+| Команда | Описание | Пример |
+|---|---|---|
+| event:cache | Кэшировать события и слушателей | `php artisan event:cache` |
+| event:clear | Очистить кэш событий | `php artisan event:clear` |
+| event:generate | Сгенерировать события и слушателей | `php artisan event:generate` |
+| event:list | Список всех событий и слушателей | `php artisan event:list` |
+
+---
+
+### **Ресурсы и локали**
+| **Команда** | **Описание (включая параметры и аргументы)** | **Пример команды** |
+|---|---|---|
+| vendor:publish | Опубликовать файлы пакетов | `php artisan vendor:publish --tag=public` |
+| lang:publish | Опубликовать локали пакетов | `php artisan lang:publish` |
+
+---
+
+### **Документация и кастомные команды**
+- Любые команды от пакетов также будут здесь доступны (например, из Spatie, Laravel Breeze, Jetstream и т.д.).
+
+---

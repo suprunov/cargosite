@@ -6,92 +6,83 @@ use Illuminate\View\View;
 
 class PageController extends Controller
 {
-    public function about(): View
+    public function homeIndex(): View
     {
-        return view('pages.about');
+        return view('pages.home.index');
     }
 
-    public function career(): View
+    public function aboutIndex(): View
     {
-        return view('pages.career');
+        return view('pages.about.index');
     }
 
-    public function cargoFuel(): View
+    public function contactsIndex(): View
     {
-        return view('pages.cargoFuel');
+        return view('pages.contacts.index');
     }
 
-    public function contacts(): View
+    public function documentationIndex(): View
     {
-        return view('pages.contacts');
+        return view('pages.documentation.index');
     }
 
-    public function docs(): View
+    public function fuelIndex(): View
     {
-        return view('pages.docs');
+        return view('pages.fuel.index');
     }
 
-    public function fuel(): View
+    public function fuelAbout(): View
     {
-        return view('pages.fuel');
+        return view('pages.fuel.about');
+    }
+
+    public function fuelAdblue(): View
+    {
+        return view('pages.fuel.adblue');
     }
 
     public function fuelCards(): View
     {
-        return view('pages.fuelCards');
+        return view('pages.fuel.cards');
     }
 
-    public function home(): View
+    public function fuelRelatedProducts(): View
     {
-        return view('pages.home');
+        return view('pages.fuel.relatedProducts');
     }
 
-    public function news(): View
+    public function fuelRelatedServices(): View
     {
-        return view('pages.news');
+        return view('pages.fuel.relatedServices');
     }
 
-    public function newsDetail($slug): View
+    public function fuelServices(): View
     {
-//        $news = News::where('slug', $slug)->firstOrFail();
-        $news = "Текст новости";
-        $breadcrumbs = [
-            ['title' => 'Главная', 'url' => route('home')],
-            ['title' => 'Новости', 'url' => route('news')],
-//            ['title' => $news->title, 'url' => ''],
-            ['title' => "Заголовок детальной новости", 'url' => ''],
-        ];
-
-        return view('pages.newsDetail', compact('news', 'breadcrumbs'));
+        return view('pages.fuel.services');
     }
 
-    public function products(): View
+    public function newsIndex(): View
     {
-        return view('pages.products');
+        return view('pages.news.index');
     }
 
-    public function repairCenterDetail($slug): View
+    public function policyIndex(): View
     {
-        return view('pages.repairCenterDetail', ['slug' => $slug]);
+        return view('pages.policy.index');
     }
 
-    public function repairCenters(): View
+    public function suppliersIndex(): View
     {
-        return view('pages.repairCenters');
+        return view('pages.suppliers.index');
     }
 
-    public function services(): View
+    public function vacanciesIndex(): View
     {
-        return view('pages.services');
+        return view('pages.vacancies.index');
     }
 
-    public function suppliers(): View
+    public function vacanciesVacancy(string $slug): View
     {
-        return view('pages.suppliers');
-    }
-
-    public function vacancy($slug): View
-    {
-        return view('pages.vacancy', ['slug' => $slug]);
+        return view('pages.vacancies.vacancy', ['slug' => $slug]);
     }
 }
