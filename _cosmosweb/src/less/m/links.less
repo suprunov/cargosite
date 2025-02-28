@@ -1,0 +1,42 @@
+.s-link() {
+	color: var(--c-link);
+	// text-decoration: underline solid fade(@c-link,0%);
+	// text-decoration-thickness: 1px;
+	// // text-underline-offset: 2px;
+	// text-underline-offset: 0.12em;
+	text-decoration: none;
+	// background-image: linear-gradient(to right, fade(@c-link,30%) 0%, fade(@c-link,30%) 100%);
+	// background-position: 0 95%;
+	// background-repeat: repeat-x;
+	// background-size: 1px 1px;
+	transition: color @trsOut, background-color @trsOut, opacity @trsOut, border-color @trsOut, text-decoration-color @trsOut;
+
+	outline: none;
+
+	cursor: pointer;
+}
+.s-link-hover() {
+	color: var(--c-link-hover);
+	// text-decoration: underline solid fade(@c-link,75%);
+	// text-decoration-line: underline;
+	// text-decoration-color: fade(@c-link,75%);
+	// text-decoration: none;
+	// text-decoration-color: fade(@c-link,0%);
+	// text-decoration-color: fade(@c-link,0%);
+	// background-image: linear-gradient(to right, fade(@c-link-hover,30%) 0%, fade(@c-link-hover,30%) 100%);
+	// background-position: 0 95%;
+	// background-repeat: repeat-x;
+	// background-size: 1px 1px;
+
+	transition: color @trsIn, background-color @trsIn, opacity @trsIn, border-color @trsIn, text-decoration-color @trsIn;
+}
+
+a,
+.link {
+	.s-link();
+
+	&:hover {
+		.s-link-hover()
+	}
+}
+

@@ -1,0 +1,99 @@
+@@include('modules/__header.html',{
+	"isIndex": false,
+	"isAuthed": false,
+	"isInner": "fuel",
+	"bodyClass": "page-fuel",
+	"headerClass": ""
+})
+
+<div class="pathBar"><div class="pathBar__inner">
+	<a href="home.html" class="pathBar__item">Главная</a>
+	<span class="pathBar__sep"></span>
+	<span class="pathBar__item _active">топливо</span>
+</div></div>
+<div class="pathBar _back"><div class="pathBar__inner">
+	<a href="fuel.html" class="pathBar__item _back"><img src="../img/icons/pathbar-back.svg" inline alt="">Назад</a>
+</div></div>
+
+
+<section class="content-hero fuel-about__hero">
+	<div class="folder-white"><div class="folder-white__body">
+		<div class="content-hero__inner">
+			<div class="content-hero__body">
+				<h1 class="content-hero__heading">Топливо напрямую от&nbsp;Tatneft в&nbsp;Москве</h1>
+				<p class="content-hero__copy">Сэкономьте на&nbsp;топливе до&nbsp;30% с&nbsp;помощью топливных карт</p>
+				<p class="content-hero__cta">
+					<a href="#calculate" class="btn-cta">Оставить заявку</a>
+				</p>
+			</div>
+			<div class="content-hero__image"><img src="img/fuel/about/hero.jpg" alt="" loading="lazy"></div>
+		</div>
+	</div></div>
+</section>
+
+@@include('modules/__fuel-calculate.html')
+
+<section class="fuel-types"><div class="fuel-types__inner">
+	<h2 class="fuel-types__heading">Какое топливо можно приобрести</h2>
+	<div class="fuel-types__list">
+		<div class="fuel-types__item"><div class="fuel-types__item-inner">
+			<h2 class="fuel-types__item-heading">Дизель</h2>
+			<div class="fuel-types__item-image"><img src="img/fuel/about/diesel.png" alt=""></div>
+		</div></div>
+		<div class="fuel-types__item"><div class="fuel-types__item-inner">
+			<h2 class="fuel-types__item-heading">Метан</h2>
+			<div class="fuel-types__item-image"><img src="img/fuel/about/methane.png" alt=""></div>
+		</div></div>
+		<div class="fuel-types__item"><div class="fuel-types__item-inner">
+			<h2 class="fuel-types__item-heading">Adblue</h2>
+			<div class="fuel-types__item-image"><img src="img/fuel/about/propane.png" alt=""></div>
+		</div></div>
+		<div class="fuel-types__item"><div class="fuel-types__item-inner">
+			<h2 class="fuel-types__item-heading">Пропан</h2>
+			<div class="fuel-types__item-image"><img src="img/fuel/about/adblue.png" alt=""></div>
+		</div></div>
+	</div>
+</div></section>
+
+<section class="content-hero fuel__hero fuel-direct">
+	<div class="folder-white"><div class="folder-white__body">
+		<div class="content-hero__inner">
+			<div class="content-hero__body">
+				<h1 class="content-hero__heading">Покупайте дизельное топливо напрямую от&nbsp;производителя</h1>
+				<p class="content-hero__copy">Топливная карта для юридических лиц, без скрытых платежей и&nbsp;комиссий с&nbsp;отсрочкой платежа на&nbsp;30&nbsp;дней.</p>
+				<p class="content-hero__cta">
+					<a href="#calculate" class="btn-cta">Оставить заявку</a>
+				</p>
+			</div>
+			<div class="content-hero__image"><img src="img/fuel/hero.png" alt="" loading="lazy"></div>
+		</div>
+	</div></div>
+</section>
+
+@@include('modules/__fuel-comparison.html')
+
+@@include('modules/__fuel-regions.html',{
+	heading: "Экономия в&nbsp;разных регионах"
+})
+
+<div class="seo"><div class="seo__inner">
+	<h2>SEO-текст</h2>
+	<p>Топливная карта для юр&nbsp;лиц и&nbsp;ИП&nbsp;— современное безналичное средство расчета за&nbsp;топливо (бензин, ДТ, газ) и&nbsp;контроля Ваших денежных средств. Топливная карта (заправочная) представляет собой пластиковый носитель с&nbsp;чипом для оплаты горючего в&nbsp;сети приема АЗС. Каждая карта имеет свой уникальный номер, закрепленный за&nbsp;определенном эмитентом, и&nbsp;денежный баланс.</p>
+</div>
+
+</div>
+
+
+
+@@include('modules/__footer.html',{
+	"isIndex": false,
+	"isAuthed": false,
+	"isInner": "fuel",
+	"footerClass": ""
+})
+
+@@include('modules/__burger-menu.html',{
+	"isIndex": false,
+	"isAuthed": false,
+	"isInner": "fuel"
+})

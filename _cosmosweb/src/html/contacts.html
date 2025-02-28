@@ -1,0 +1,269 @@
+@@include('modules/__header.html',{
+	"isIndex": false,
+	"isAuthed": false,
+	"isInner": "contacts",
+	"bodyClass": "",
+	"headerClass": ""
+})
+
+
+<div class="pathBar"><div class="pathBar__inner">
+	<a href="home.html" class="pathBar__item">Главная</a>
+	<span class="pathBar__sep"></span>
+	<span class="pathBar__item _active">Контакты</span>
+</div></div>
+
+<div class="contacts"><div class="contacts__inner">
+	<h1 class="contacts__heading">Контакты</h1>
+	<div class="contacts__main">
+		<article class="contacts__item contacts__main-item">
+			<div class="contacts__item-header">
+				<h2 class="contacts__item-header-heading">Центральный офис Cargonomica</h2>
+			</div>
+			<ul class="contacts__item-list">
+				<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+				<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+				<li>г. Москва, Киевское шоссе, <nobr>22-й</nobr> км.</li>
+			</ul>
+			<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+		</article>
+		<div class="contacts__main-map" data-geo="37.430929,55.635904" data-zoom="16"></div>
+	</div>
+	<div class="popup__hidden">
+		<div class="home-faq__ask">
+			<form action="#" class="form form_required home-faq__form">
+				<h2 class="home-faq__form-heading">Задать вопрос</h2>
+				<p class="home-faq__form-copy">Менеджер пришлет ответ на&nbsp;указанную почту</p>
+				<div class="form__item">
+					<input type="text" class="form__input _text" placeholder="Фамилия, имя и отчество" data-message="Введите фамилию и имя" required>
+				</div>
+				<div class="form__item">
+					<input type="email" class="form__input _email" placeholder="Email" data-message="Введите Email" required>
+				</div>
+				<div class="form__item">
+					<textarea class="form__input" placeholder="Задайте свой вопрос" data-message="Задайте свой вопрос" required></textarea>
+				</div>
+				<div class="form__submit">
+					<button class="btn-cta" type="submit">Отправить</button>
+					<p class="form__submit-agreement">Нажимая на&nbsp;кнопку «Отправить», вы&nbsp;принимаете согласие на&nbsp;<a href="policy.html" target="_blank">обработку персональных данных</a></p>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="tabs _js-tabs">
+		<div class="tabs__items">
+			<div class="tabs__items-item _active" data-rel="services">Сервисы</div>
+			<div class="tabs__items-item" data-rel="departments">Отделы</div>
+			<div class="tabs__items-item" data-rel="support">Техподдержка</div>
+			<div class="tabs__items-item" data-rel="pr">PR</div>
+		</div>
+		<div class="tabs__item" data-rel="services">
+			<div class="contacts__list">
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-3.svg" alt="">Cargo.Fuel</h2>
+						<p class="contacts__item-header-copy">Топливо со&nbsp;скидкой и&nbsp;бесплатный <nobr>GPS-мониторинг</nobr></p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-7.svg" alt="">Cargo.Leasing</h2>
+						<p class="contacts__item-header-copy">Покупка полуприцепов по&nbsp;скидкам</p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-4.svg" alt="">Cargo.Insurance</h2>
+						<p class="contacts__item-header-copy">Страхование для транспортных компаний по&nbsp;подписке</p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-2.svg" alt="">Cargo.Logistics</h2>
+						<p class="contacts__item-header-copy">Топливо со&nbsp;скидкой и&nbsp;бесплатный <nobr>GPS-мониторинг</nobr></p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+			</div>
+		</div>
+		<div class="tabs__item" data-rel="departments">
+			<div class="contacts__list">
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-7.svg" alt="">Cargo.Leasing</h2>
+						<p class="contacts__item-header-copy">Покупка полуприцепов по&nbsp;скидкам</p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-3.svg" alt="">Cargo.Fuel</h2>
+						<p class="contacts__item-header-copy">Топливо со&nbsp;скидкой и&nbsp;бесплатный <nobr>GPS-мониторинг</nobr></p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-4.svg" alt="">Cargo.Insurance</h2>
+						<p class="contacts__item-header-copy">Страхование для транспортных компаний по&nbsp;подписке</p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-2.svg" alt="">Cargo.Logistics</h2>
+						<p class="contacts__item-header-copy">Топливо со&nbsp;скидкой и&nbsp;бесплатный <nobr>GPS-мониторинг</nobr></p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+			</div>
+		</div>
+		<div class="tabs__item" data-rel="support">
+			<div class="contacts__list">
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-4.svg" alt="">Cargo.Insurance</h2>
+						<p class="contacts__item-header-copy">Страхование для транспортных компаний по&nbsp;подписке</p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-2.svg" alt="">Cargo.Logistics</h2>
+						<p class="contacts__item-header-copy">Топливо со&nbsp;скидкой и&nbsp;бесплатный <nobr>GPS-мониторинг</nobr></p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-3.svg" alt="">Cargo.Fuel</h2>
+						<p class="contacts__item-header-copy">Топливо со&nbsp;скидкой и&nbsp;бесплатный <nobr>GPS-мониторинг</nobr></p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-7.svg" alt="">Cargo.Leasing</h2>
+						<p class="contacts__item-header-copy">Покупка полуприцепов по&nbsp;скидкам</p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+			</div>
+		</div>
+		<div class="tabs__item" data-rel="pr">
+			<div class="contacts__list">
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-2.svg" alt="">Cargo.Logistics</h2>
+						<p class="contacts__item-header-copy">Топливо со&nbsp;скидкой и&nbsp;бесплатный <nobr>GPS-мониторинг</nobr></p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-3.svg" alt="">Cargo.Fuel</h2>
+						<p class="contacts__item-header-copy">Топливо со&nbsp;скидкой и&nbsp;бесплатный <nobr>GPS-мониторинг</nobr></p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-7.svg" alt="">Cargo.Leasing</h2>
+						<p class="contacts__item-header-copy">Покупка полуприцепов по&nbsp;скидкам</p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+				<article class="contacts__item">
+					<div class="contacts__item-header">
+						<h2 class="contacts__item-header-heading"><img src="img/about/products-logo-4.svg" alt="">Cargo.Insurance</h2>
+						<p class="contacts__item-header-copy">Страхование для транспортных компаний по&nbsp;подписке</p>
+					</div>
+					<ul class="contacts__item-list">
+						<li><nobr class="phone"><a href="tel:+7 (499) 577-01-80">+7 (499) 577-01-80</a></nobr></li>
+						<li><a href="mailto:info@cargonomica.com">info@cargonomica.com</a></li>
+					</ul>
+					<p class="contacts__item-cta"><button class="btn _js-faq-ask">Написать нам</button></p>
+				</article>
+			</div>
+		</div>
+	</div>
+</div></div>
+
+
+
+@@include('modules/__footer.html',{
+	"isIndex": false,
+	"isAuthed": false,
+	"isInner": "contacts",
+	"footerClass": ""
+})
+
+@@include('modules/__burger-menu.html',{
+	"isIndex": false,
+	"isAuthed": false,
+	"isInner": "contacts"
+})

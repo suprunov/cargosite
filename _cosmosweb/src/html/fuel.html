@@ -1,0 +1,202 @@
+@@include('modules/__header.html',{
+	"isIndex": false,
+	"isAuthed": false,
+	"isInner": "fuel",
+	"bodyClass": "page-fuel",
+	"headerClass": ""
+})
+
+<div class="pathBar"><div class="pathBar__inner">
+	<a href="home.html" class="pathBar__item">Главная</a>
+	<span class="pathBar__sep"></span>
+	<span class="pathBar__item _active">Cargo.Fuel</span>
+</div></div>
+<div class="pathBar _back"><div class="pathBar__inner">
+	<a href="home.html" class="pathBar__item _back"><img src="../img/icons/pathbar-back.svg" inline alt="">Назад</a>
+</div></div>
+
+<section class="content-hero fuel__hero">
+	<div class="folder-white"><div class="folder-white__body">
+		<div class="content-hero__inner">
+			<div class="content-hero__body">
+				<h1 class="content-hero__heading">Cокращайте расходы компании с&nbsp;помощью <strong>Cargo.Fuel</strong></h1>
+				<p class="content-hero__copy">за&nbsp;счет скидок, бесплатного мониторинга и&nbsp;оптимизации маршрутов</p>
+				<p class="content-hero__cta">
+					<a href="#apply" class="btn-cta">Сократить расходы</a>
+				</p>
+			</div>
+			<div class="content-hero__image"><img src="img/fuel/hero.png" alt="" loading="lazy"></div>
+		</div>
+	</div></div>
+</section>
+
+<section class="home-services fule-services">
+	<div class="folder"><div class="folder__body">
+		<div class="fule-services__header">
+			<div class="fule-services__header-body">
+				<h2 class="home-services__heading">Экономия в&nbsp;одном приложении</h2>
+				<p class="home-services__copy">Каждая функция приложения помогает экономить. Скидки между собой суммируются для получения максимальной выгоды от&nbsp;продукта.</p>
+			</div>
+			<div class="fule-services__header-label">
+				<strong>30%</strong>
+				выгоды от&nbsp;использования от&nbsp;использования всего функционала приложения
+			</div>
+		</div>
+		<div class="home-services__list">
+			<div class="home-services__list-item">
+				<article class="box-bottom">
+					<div class="box-bottom__back"><div class="box-bottom__back-bottom"></div></div>
+					<div class="box-bottom__body home-services__item">
+						<div class="home-services__item-top">
+							<h3 class="home-services__item-heading"><img src="img/home/services-2.png" alt="" loading="lazy">Оптимизация маршрутов</h3>
+							<p class="home-services__item-copy">Cargo.Fuel оптимизирует маршруты с&nbsp;учетом цен и&nbsp;ваших скидок на&nbsp;АЗС по&nbsp;пути следования</p>
+						</div>
+						<div class="home-services__item-bottom">
+							<p class="home-services__item-stats"><strong><nobr>3-5%</nobr></strong> от&nbsp;затрат на&nbsp;топливо</p>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="home-services__list-item">
+				<article class="box-bottom">
+					<div class="box-bottom__back"><div class="box-bottom__back-bottom"></div></div>
+					<div class="box-bottom__body home-services__item">
+						<div class="home-services__item-top">
+							<h3 class="home-services__item-heading"><img src="img/fuel/fuel-card-icon.png" alt="" loading="lazy">Топливая карта</h3>
+							<p class="home-services__item-copy _long">Экономия на&nbsp;заправке и&nbsp;покупке сопутствующих товаров на&nbsp;заправках партнера.</p>
+						</div>
+						<div class="home-services__item-bottom">
+							<p class="home-services__item-stats"><strong><nobr>15-20%</nobr></strong> от&nbsp;постоянных затрат</p>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="home-services__list-item _wide">
+				<article class="box-bottom">
+					<div class="box-bottom__back"><div class="box-bottom__back-bottom"></div></div>
+					<div class="box-bottom__body home-services__item">
+						<div class="home-services__item-top">
+							<h3 class="home-services__item-heading"><img src="img/home/services-3.png" alt="" loading="lazy">Бесплатная система мониторинга </h3>
+							<p class="home-services__item-copy">Управление автопарком и&nbsp;логистикой происходит в&nbsp;одном приложении</p>
+							<p class="home-services__item-cta"><a href="#calculate" class="btn-cta">Снизить затраты</a></p>
+						</div>
+						<div class="home-services__item-bottom">
+							<p class="home-services__item-stats"><strong>&ndash;1500&nbsp;₽</strong> за&nbsp;1&nbsp;грузовик</p>
+							<p class="home-services__item-cta"><a href="#calculate" class="btn-cta">Снизить затраты</a></p>
+						</div>
+						<div class="home-services__item-image">
+							<img src="img/home/monitoring-map.png" class="home-services__item-image-back" alt="">
+							<div class="home-services__item-image-front"><img src="img/home/monitoring-screen.png" class="" alt=""></div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</div></div>
+</section>
+
+@@include('modules/__fuel-regions.html',{
+	heading: "Экономия в&nbsp;разных регионах"
+})
+
+@@include('modules/__fuel-comparison.html')
+
+
+@@include('modules/__fuel-calculate.html')
+
+<section class="home-ecosystem fuel-routes"><div class="home-ecosystem__inner">
+	<h2 class="home-ecosystem__heading">Сервис построения <br>оптимальных маршрутов</h2>
+	<div class="home-ecosystem__body">
+		<div class="home-ecosystem__list">
+			<article class="home-ecosystem__item _active">
+				<div class="home-ecosystem__item-heading">
+					<img src="img/home/services-3.png" alt="" loading="lazy">
+					Оптимизированные маршруты
+				</div>
+				<div class="home-ecosystem__item-body">
+					<p class="home-ecosystem__item-copy">Cоздание маршрута с&nbsp;учетом платные дорог, «Платон», цены на&nbsp;АЗС по&nbsp;пути с&nbsp;учетом персональных скидок.</p>
+					<figure class="home-ecosystem__item-image">
+						<img src="img/fuel/routes.png" alt="">
+					</figure>
+				</div>
+			</article>
+			<article class="home-ecosystem__item">
+				<div class="home-ecosystem__item-heading">
+					<img src="img/fuel/icon-limits.png" alt="" loading="lazy">
+					Лимиты для водителей
+				</div>
+				<div class="home-ecosystem__item-body">
+					<p class="home-ecosystem__item-copy">Медиа о&nbsp;том, как повысить эффективность управление логистикой и&nbsp;автопарком.</p>
+					<figure class="home-ecosystem__item-image">
+						<img src="img/home/eco-journal.png" alt="">
+					</figure>
+				</div>
+			</article>
+			<article class="home-ecosystem__item">
+				<div class="home-ecosystem__item-heading">
+					<img src="img/fuel/icon-reports.png" alt="" loading="lazy">
+					Отчет по транзакциям
+				</div>
+				<div class="home-ecosystem__item-body">
+					<p class="home-ecosystem__item-copy">Медиа о&nbsp;том, как повысить эффективность управление логистикой и&nbsp;автопарком.</p>
+					<figure class="home-ecosystem__item-image">
+						<img src="img/fuel/routes.png" alt="">
+					</figure>
+				</div>
+			</article>
+		</div>
+	</div>
+</div></section>
+
+<section class="home-reviews">
+	<div class="home-reviews__inner">
+		<h2 class="home-reviews__heading">Что говорят о &nbsp;нас</h2>
+	</div>
+
+	<div class="swiper"><div class="swiper-wrapper">
+		@@for (var i = 0; i < 4; i++) {<div class="swiper-slide"><article class="home-reviews__item">
+			<div class="home-reviews__item-person">
+				<img src="img/home/review.jpg" alt="" class="home-reviews__item-person-image">
+				<h4 class="home-reviews__item-person-name">Виктор Лиев</h4>
+				<p class="home-reviews__item-person-pos">Логист CDEK</p>
+			</div>
+			<p class="home-reviews__item-copy">На&nbsp;постоянной основе используем Cargo.Fuel. Благодаря сервису, сократили расходы на&nbsp;бензин&nbsp;и смогли деньги инвестировать&nbsp;в развитие автопарка.</p>
+			<p class="home-reviews__item-cta"><span>Показать полностью <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="#A7ADC8" stroke-width="1.6" d="m10.243 16.243 4.172-4.172a.1.1 0 0 0 0-.142l-4.172-4.172"/></svg></span></p>
+			<div class="popup__hidden">
+				<div class="home-reviews__full">
+					<div class="home-reviews__item-person">
+						<img src="img/home/review.jpg" alt="" class="home-reviews__item-person-image">
+						<h4 class="home-reviews__item-person-name">Виктор Лиев</h4>
+						<p class="home-reviews__item-person-pos">Логист CDEK</p>
+					</div>
+					<div class="home-reviews__full-article">
+						<p>На&nbsp;постоянной основе используем Cargo.Fuel. Благодаря сервису, сократили расходы на&nbsp;бензин и&nbsp;смогли деньги инвестировать в&nbsp;развитие автопарка.На постоянной основе используем Cargo.Fuel. Благодаря сервису, сократили расходы на&nbsp;бензин и&nbsp;смогли деньги инвестировать в&nbsp;развитие автопарка.На постоянной основе используем Cargo.Fuel. Благодаря сервису, сократили расходы на&nbsp;бензин и&nbsp;смогли деньги инвестировать в&nbsp;развитие автопарка.На постоянной основе используем Cargo.Fuel. Благодаря сервису, сократили расходы на&nbsp;бензин и&nbsp;смогли деньги инвестировать в&nbsp;развитие автопарка.</p>
+					</div>
+				</div>
+			</div>
+		</article></div>}
+	</div></div>
+</section>
+
+
+
+
+
+@@include('modules/__fuel-apply.html',{
+	heading: ""
+})
+
+
+
+@@include('modules/__footer.html',{
+	"isIndex": false,
+	"isAuthed": false,
+	"isInner": "fuel",
+	"footerClass": ""
+})
+
+@@include('modules/__burger-menu.html',{
+	"isIndex": false,
+	"isAuthed": false,
+	"isInner": "fuel"
+})

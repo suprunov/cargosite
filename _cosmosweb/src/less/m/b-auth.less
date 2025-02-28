@@ -1,0 +1,219 @@
+.auth {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background: var(--c-bg);
+    min-height: 100svh;
+
+    transform: scale(0.75);
+    opacity: 0;
+    transition: transform, opacity;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+
+    
+    && .btn-cta {
+        --c-btn-cta: #20212B;
+        --c-btn-cta-text: #FFF;
+        --c-btn-cta-hover: #000000;
+        --c-btn-cta-active: #000000;
+        --c-btn-cta-active-text: #FFF;
+    }
+
+    &._show {
+        display: flex;
+    }
+    &._show-full {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    &__close-wrapper {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 10;
+		padding: 24px;
+		pointer-events: none;
+	}
+	&__close {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+        background: rgba(255, 255, 255, 0.4);
+        // box-shadow: 0px -2px 12px rgba(19, 19, 19, 0.08);
+        backdrop-filter: blur(16px);
+        border-radius: 2px;
+
+		pointer-events: auto;
+
+		position: sticky;
+		top: 24px;
+
+		svg {
+			display: block;
+		}
+		path {
+			transition: fill var(--trs-out);
+		}
+		.notouch &:hover path {
+			fill: var(--c-link-hover);
+			transition: fill var(--trs-in);
+		}
+		.no-tap;
+		cursor: pointer;
+	}
+    @media (max-width: 760px) {
+        &__close-wrapper {
+            padding: 4px 10px;
+        }
+        &__close {
+            top: 4px;
+        }
+    }
+
+    &__side {
+        width: 50%;
+        background: #E8E8F8;
+        align-self: start;
+        min-height: 100svh;
+        position: sticky;
+        top: 0;
+        &:after {
+            display: block; content: '';
+            position: absolute;
+            top: 20px;
+            right: 56px;
+            bottom: 30px;
+            left: 0;
+            background: url(../img/auth.png) 0 50% no-repeat;
+            background-size: contain;
+        }
+    }
+    &__main {
+        width: 50%;
+        padding: 48px 120px 32px 120px;
+        @media (max-width: 1400px) {
+            .w;
+        }
+    }
+    &__body {
+        max-width: 516px;
+        margin: 0 auto;
+    }
+    &__logo {
+        margin: 0 0 16px 0;
+        img {
+            display: block;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        &._show {
+            display: block;
+        }
+        &__side {
+            display: none;
+        }
+        &__main {
+            width: auto;
+            padding-top: 32px;
+        }
+    }
+    @media (max-width: 760px) {
+        &__main {
+            padding-top: 0;
+        }
+        &__body {
+            max-width: none;
+        }
+        &__logo {
+            .w;
+            .w-offset;
+            margin-bottom: 40px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--c-bd-primary);
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__form-login {
+        &-forgot {
+            display: flex;
+            justify-content: flex-end;
+            margin: 4px 0 0 0;
+            &-link {
+                .text-caption-2;
+                .link;
+                --c-link: var(--c-text-2);
+                --c-link-hover: var(--c-text);
+            }
+        }
+        &-new {
+            margin: 40px 0 0 0;
+            padding: 31px 0 0 0;
+            border-top: 1px solid var(--c-bd-primary);
+            color: var(--c-text-3);
+            &-link {
+                .link;
+                ----c-link: var(--c-text);
+                font-weight: 500;
+                // --c-link-hover: var(--c-text-2);
+            }
+            @media (max-width: 1024px) {
+                margin-top: 32px;
+            }
+            @media (max-width: 760px) {
+                margin-top: 24px;
+                padding-top: 23px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    &__form-reg {
+        .form-apply__progress-handler {
+            background-color: var(--c-base);
+        }
+        &-step {
+            margin: 40px 0 0 0;
+        }
+        h4 {
+            margin: 40px 0 24px 0;
+        }
+        @media (max-width: 760px) {
+            &-step {
+                margin-top: 24px;
+            }
+            h4 {
+                margin: 24px 0 16px 0;
+            }
+        }
+        &-back {
+            display: none;
+            &-link {
+                .link;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                font-weight: 500;
+            }
+        }
+    }
+    .form-message__copy {
+        margin: -24px 0 40px 0 !important;
+        @media (max-width: 1000px) {
+            margin: -16px 0 32px 0 !important;
+        }
+    }
+}

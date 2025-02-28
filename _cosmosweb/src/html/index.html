@@ -1,0 +1,52 @@
+@@include('modules/__header.html',{
+	"isIndex": true,
+	"isAuthed": false,
+	"isInner": false,
+	"bodyClass": "",
+	"headerClass": ""
+})
+
+
+<div class="sitemap">
+	<ul>
+		<li><a href="home.html">Главная</a></li>
+		<li><a href="about.html">О компании</a></li>
+		<li><a href="suppliers.html">Поставщикам</a></li>
+		<li>
+			<a href="news.html">Новости</a>
+			<ul>
+				<li><a href="news-item.html">Страница новости</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="vacancies.html">Карьера</a>
+			<ul>
+				<li><a href="vacancies-item.html">Страница вакансии</a></li>
+			</ul>
+		</li>
+		<li><a href="contacts.html">Контакты</a></li>
+		<li><a href="policy.html">Политика конфиденциальности</a></li>
+		<li><a href="404.html">Ошибка 404</a></li>
+		<li><a href="fuel.html">Cargo.Fuel</a></li>
+		<li><a href="fuel-about.html">Cargo.Fuel / Топливо</a></li>
+		<li><a href="fuel-cards.html">Cargo.Fuel / Топливные карты</a></li>
+		<li><a href="fuel-services.html">Cargo.Fuel / Сервисы общая</a></li>
+		<li><a href="fuel-adblue.html">Cargo.Fuel / Сервисы детальная</a></li>
+		<li><a href="fuel-related-services.html">Cargo.Fuel / Сопутствующие сервисы</a></li>
+		<li><a href="fuel-related-products.html">Cargo.Fuel / Сопутствующие товары</a></li>
+	</ul>
+</div>
+
+
+@@include('modules/__footer.html',{
+	"isIndex": true,
+	"isAuthed": false,
+	"isInner": false,
+	"footerClass": ""
+})
+
+@@include('modules/__burger-menu.html',{
+	"isIndex": true,
+	"isAuthed": false,
+	"isInner": false
+})
