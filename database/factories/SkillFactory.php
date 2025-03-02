@@ -2,12 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Models\Skill;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Page>
+ * @extends Factory<Skill>
  */
-class PageFactory extends Factory
+class SkillFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +18,7 @@ class PageFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => $this->faker->word(),
         ];
     }
 }

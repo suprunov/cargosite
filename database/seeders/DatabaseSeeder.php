@@ -2,9 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Skill;
+use App\Models\Vacancy;
+use App\Models\VacancyDirection;
 use Illuminate\Database\Seeder;
+
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,11 +16,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $directions = VacancyDirection::factory(5)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        $skills = Skill::factory(10)->create();
+
+        foreach ($directions as $direction) {
+            $vacancies = Vacancy::factory(10)->create([
+                'vacancy_direction_id' => $direction->id,
+            ]);
+
+            foreach ($vacancies as $vacancy) {
+                $vacancy->skills()->attach($skills->random(rand(2, 5))->pluck('id'));
+            }
+        }
     }
 }
