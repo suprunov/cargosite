@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f042ff287829a6a1a018bee816d71a2b",
+    "content-hash": "1d74a02aadb9325955b648cf89f333db",
     "packages": [
         {
             "name": "brick/math",
@@ -2205,6 +2205,71 @@
                 }
             ],
             "time": "2024-12-05T17:15:07+00:00"
+        },
+        {
+            "name": "moonshine/ace",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moonshine-software/ace.git",
+                "reference": "2c93d7640e92c04a4d1f9f7ab66b92ee9d6ff9ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moonshine-software/ace/zipball/2c93d7640e92c04a4d1f9f7ab66b92ee9d6ff9ab",
+                "reference": "2c93d7640e92c04a4d1f9f7ab66b92ee9d6ff9ab",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": "^8.2|^8.3"
+            },
+            "conflict": {
+                "moonshine/moonshine": "<3.0.0"
+            },
+            "require-dev": {
+                "moonshine/moonshine": "^3.0",
+                "orchestra/testbench": "^9.0",
+                "phpunit/phpunit": "^11.0.1",
+                "rector/rector": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MoonShine\\Ace\\Providers\\AceServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MoonShine\\Ace\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Danil Shutsky",
+                    "email": "info@cutcode.ru",
+                    "homepage": "https://cutcode.dev"
+                }
+            ],
+            "description": "Ace editor for MoonShine",
+            "homepage": "https://moonshine-laravel.com",
+            "keywords": [
+                "ace",
+                "code",
+                "moonshine"
+            ],
+            "support": {
+                "issues": "https://github.com/moonshine-software/ace/issues",
+                "source": "https://github.com/moonshine-software/ace"
+            },
+            "time": "2025-01-24T08:25:43+00:00"
         },
         {
             "name": "moonshine/moonshine",

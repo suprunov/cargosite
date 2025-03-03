@@ -30,6 +30,10 @@ use MoonShine\UI\Components\{Breadcrumbs,
     Layout\TopBar,
     Layout\Wrapper,
     When};
+use App\MoonShine\Resources\SkillResource;
+use MoonShine\MenuManager\MenuItem;
+use App\MoonShine\Resources\VacancyDirectionResource;
+use App\MoonShine\Resources\VacancyResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -44,6 +48,9 @@ final class MoonShineLayout extends AppLayout
     {
         return [
             ...parent::menu(),
+            MenuItem::make('Skills', SkillResource::class),
+            MenuItem::make('VacancyDirections', VacancyDirectionResource::class),
+            MenuItem::make('Vacancies', VacancyResource::class),
         ];
     }
 
