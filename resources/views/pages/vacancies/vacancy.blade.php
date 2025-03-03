@@ -33,6 +33,7 @@
         </div>
     </div>
 
+
     <article class="vacancy-item">
         <div class="vacancy-item__inner">
             <header class="vacancy-item__header">

@@ -22,6 +22,7 @@ class VacancyDirectionFactory extends Factory
         return [
             'title' => $this->faker->word(),
             'slug' => $this->faker->slug(),
+            'description' => $this->faker->realText(300, 2),
             'sort' => (self::$sortCounter++) * 100,
             'created_by' => 1,
             'updated_by' => 1,

@@ -5,13 +5,22 @@ namespace Database\Seeders;
 use App\Models\Skill;
 use App\Models\Vacancy;
 use App\Models\VacancyDirection;
+use Faker\Factory as FakerFactory;
+use Faker\Generator;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-
 class DatabaseSeeder extends Seeder
 {
+    private static int $sortCounter = 1;
+    private Generator $faker;
+
+    public function __construct()
+    {
+        // Создаем экземпляр Faker с русской локалью
+        $this->faker = FakerFactory::create('ru_RU');
+    }
+
     /**
      * Seed the application's database.
      */
@@ -26,6 +35,10 @@ class DatabaseSeeder extends Seeder
             return VacancyDirection::create([
                 'title' => $title,
                 'slug' => Str::slug($title),
+                'description' => $this->faker->realText(300, 2),
+                'sort' => (self::$sortCounter++) * 100,
+                'created_by' => 1,
+                'updated_by' => 1,
             ]);
         });
 

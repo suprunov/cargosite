@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('title')->unique();
             $table->string('slug')->unique();
+            $table->text('description');
             $table->integer('sort')->default(500);
             $table->timestamps();
             $table->unsignedBigInteger('created_by')->nullable();

@@ -100,224 +100,61 @@
             </div>
         </div>
     </section>
-
     <section class="vacancies-list" id="vacancies">
         <div class="vacancies-list__inner">
             <h2 class="vacancies-list__heading">Вакансии</h2>
             <div class="tabs _js-tabs">
                 <div class="tabs__items">
-                    <div class="tabs__items-item _active" data-rel="it">Автоматизация и&nbsp;IT</div>
-                    <div class="tabs__items-item" data-rel="sales">Продажи и&nbsp;маркетинг</div>
-                    <div class="tabs__items-item" data-rel="finance">Финансы и&nbsp;бухгалтерия</div>
-                    <div class="tabs__items-item" data-rel="pr">PR</div>
+                    @foreach ($vacancyDirections as $vacancyDirection)
+                        <div class="tabs__items-item {{ $loop->first ? '_active' : '' }}"
+                             data-rel="{{ $vacancyDirection->slug }}">
+                            {{ $vacancyDirection->title }}
+                        </div>
+                    @endforeach
                 </div>
-                <div class="tabs__item" data-rel="it">
-                    <div class="vacancies-list__about">
-                        <div class="accordeon">
-                            <article class="accordeon__item">
-                                <div class="accordeon__heading">
-                                    <h4>Чем занимается направление</h4>
-                                </div>
-                                <div class="accordeon__body">
-                                    <p>Оно направляет</p>
-                                </div>
-                            </article>
+
+                @foreach ($vacancyDirections as $vacancyDirection)
+                    <div class="tabs__item" data-rel="{{ $vacancyDirection->slug }}">
+                        <div class="vacancies-list__about">
+                            <div class="accordeon">
+                                <article class="accordeon__item">
+                                    <div class="accordeon__heading">
+                                        <h4>Чем занимается направление</h4>
+                                    </div>
+                                    <div class="accordeon__body">
+                                        <p>{{ $vacancyDirection->description }}</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="vacancies-list__list">
+                            @forelse ($vacancyDirection->vacancies as $vacancy)
+                                <article class="vacancies-list__item">
+                                    <h3 class="vacancies-list__item-heading">{{ $vacancy->title }}</h3>
+                                    <p class="vacancies-list__item-info">
+                                        {{ $vacancy->location }} <i></i>
+                                        {{ $vacancy->salary ? $vacancy->salary . ' ₽' : 'з/п не указана' }} <i></i>
+                                        {{ $vacancy->place }}
+                                    </p>
+                                    <p class="vacancies-list__item-cta">
+                                        <a href="{{ route('vacanciesVacancy', $vacancy->slug) }}"
+                                           class="btn">Подробнее</a>
+                                    </p>
+                                </article>
+                            @empty
+                                <p>Вакансий пока нет</p>
+                            @endforelse
+                        </div>
+
+                        <div class="show-more" data-target=".vacancies-list__list">
+                            <button class="btn">Показать ещё</button>
                         </div>
                     </div>
-
-                    <div class="vacancies-list__list">
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Продуктовый дизайнер (Рекламная платформа)
-                                middle</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">PHP Developer (middle/senior)</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Стажер в&nbsp;Digital Innovations</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Java developer</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Стажер в&nbsp;Digital Innovations</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                    </div>
-                    <div class="show-more" data-target=".vacancies-list__list">
-                        <button class="btn">Показать ещё</button>
-                    </div>
-                </div>
-                <div class="tabs__item" data-rel="sales">
-                    <div class="vacancies-list__about">
-                        <div class="accordeon">
-                            <article class="accordeon__item">
-                                <div class="accordeon__heading">
-                                    <h4>Чем занимается направление</h4>
-                                </div>
-                                <div class="accordeon__body">
-                                    <p>Оно продаёт</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-
-                    <div class="vacancies-list__list">
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Sales-менеджер</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">PHP Developer (middle/senior)</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Стажер в&nbsp;Digital Innovations</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Java developer</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Стажер в&nbsp;Digital Innovations</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                    </div>
-                    <div class="show-more" data-target=".vacancies-list__list">
-                        <button class="btn">Показать ещё</button>
-                    </div>
-                </div>
-                <div class="tabs__item" data-rel="finance">
-                    <div class="vacancies-list__about">
-                        <div class="accordeon">
-                            <article class="accordeon__item">
-                                <div class="accordeon__heading">
-                                    <h4>Чем занимается направление</h4>
-                                </div>
-                                <div class="accordeon__body">
-                                    <p>Оно направляет</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-
-                    <div class="vacancies-list__list">
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Продуктовый дизайнер (Рекламная платформа)
-                                middle</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">PHP Developer (middle/senior)</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Стажер в&nbsp;Digital Innovations</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Java developer</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Стажер в&nbsp;Digital Innovations</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                    </div>
-                    <div class="show-more" data-target=".vacancies-list__list">
-                        <button class="btn">Показать ещё</button>
-                    </div>
-                </div>
-                <div class="tabs__item" data-rel="pr">
-                    <div class="vacancies-list__about">
-                        <div class="accordeon">
-                            <article class="accordeon__item">
-                                <div class="accordeon__heading">
-                                    <h4>Чем занимается направление</h4>
-                                </div>
-                                <div class="accordeon__body">
-                                    <p>Оно направляет</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-
-                    <div class="vacancies-list__list">
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Продуктовый дизайнер (Рекламная платформа)
-                                middle</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">PHP Developer (middle/senior)</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Стажер в&nbsp;Digital Innovations</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Java developer</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                        <article class="vacancies-list__item">
-                            <h3 class="vacancies-list__item-heading">Стажер в&nbsp;Digital Innovations</h3>
-                            <p class="vacancies-list__item-info">Москва <i></i> з/п не&nbsp;указана <i></i> офис</p>
-                            <p class="vacancies-list__item-cta"><a href="vacancies-item.html" class="btn">Подробнее</a>
-                            </p>
-                        </article>
-                    </div>
-                    <div class="show-more" data-target=".vacancies-list__list">
-                        <button class="btn">Показать ещё</button>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
-
 
     <section class="vacancies__apply" id="apply">
         <div class="folder">

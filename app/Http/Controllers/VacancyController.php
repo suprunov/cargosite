@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreVacancyRequest;
 use App\Http\Requests\UpdateVacancyRequest;
 use App\Models\Vacancy;
+use App\Models\VacancyDirection;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -13,16 +14,37 @@ class VacancyController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request): string
+    public function index(Request $request): View
     {
         $perPage = 10;
-        $vacancies = Vacancy::orderBy('sort', 'asc')->paginate($perPage);
+
+        $vacancyDirections = VacancyDirection::with([
+            'vacancies' => function ($query) {
+                $query->with('skills')
+                    ->where('published', true)
+                    ->where('active_from', '<=', now())
+                    ->where('active_to', '>=', now())
+                    ->orderBy('sort')
+                    ->limit(10);
+            }
+        ])->orderBy('sort')->paginate($perPage);
 
         if ($request->ajax()) {
-            return view('pages.vacancies.index', compact('vacancies'))->render();
+            $vacancyDirections = VacancyDirection::with([
+                'vacancies' => function ($query) {
+                    $query->with('skills')
+                        ->where('published', true)
+                        ->where('active_from', '<=', now())
+                        ->where('active_to', '>=', now())
+                        ->orderBy('sort')
+                        ->limit(10);
+                }
+            ])->orderBy('sort')->get();
+
+            return view('pages.vacancies.list-item', compact('vacancyDirections'))->render();
         }
 
-        return view('pages.vacancies.index', compact('vacancies'));
+        return view('pages.vacancies.index', compact('vacancyDirections'));
     }
 
     /**
