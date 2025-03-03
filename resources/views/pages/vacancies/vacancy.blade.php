@@ -32,72 +32,35 @@
                     src="/local/templates/main/assets/img/icons/pathbar-back.svg" inline alt="">Назад</a>
         </div>
     </div>
-
-
     <article class="vacancy-item">
         <div class="vacancy-item__inner">
             <header class="vacancy-item__header">
-                <h1 class="vacancy-item__header-heading">Project Manager</h1>
-                <p class="vacancy-item__header-info">Москва <i></i> з/п не&nbsp;указана <i></i>
-                    <nobr>3-6</nobr>
+                <h1 class="vacancy-item__header-heading">{{ $vacancy->title }}</h1>
+                <p class="vacancy-item__header-info">
+                    {{ $vacancy->location }} <i></i>
+                    {{ $vacancy->salary ? $vacancy->salary . ' ₽' : 'з/п не указана' }} <i></i>
+                    <nobr>{{ $vacancy->experience }}</nobr>
                     лет
                 </p>
-                <p class="vacancy-item__header-cta"><a href="#apply" class="btn-cta _min">Откликнуться</a></p>
+                <p class="vacancy-item__header-cta">
+                    <a href="#apply" class="btn-cta _min">Откликнуться</a>
+                </p>
             </header>
+
             <div class="vacancy-item__body">
                 <h4>Ключевые навыки</h4>
                 <ul class="vacancy-item__tags">
-                    <li><span class="tag">C++</span></li>
-                    <li><span class="tag">Математический анализ</span></li>
-                    <li><span class="tag">CFD</span></li>
-                    <li><span class="tag">CAE</span></li>
-                    <li><span class="tag">Работа с&nbsp;базами данных</span></li>
+                    @forelse($vacancy->skills as $skill)
+                        <li><span class="tag">{{ $skill->title }}</span></li>
+                    @empty
+                        <li>Навыки не указаны</li>
+                    @endforelse
                 </ul>
-                <p>Мы&nbsp;разрабатываем ЭКОСИСТЕМУ для транспортных компаний. Она существенно снижает себестоимость
-                    грузоперевозок и&nbsp;предоставляет транспортным компаниям конкурентные преимущества за&nbsp;счет
-                    автоматизации, цифровизации бизнес-процессов и&nbsp;доступу к&nbsp;маркетплейсу с&nbsp;лучшими
-                    ценами на&nbsp;товары и&nbsp;услуги.</p>
-                <div class="vacancy-item__copy">
-                    <h2>Что нужно делать</h2>
-                    <ul>
-                        <li>Участие в&nbsp;ИТ-проектах/продуктах в&nbsp;роли администратора и/или Менеджера
-                            проекта/продукта
-                        </li>
-                        <li>Реализация и&nbsp;контроль проектов/продуктов на&nbsp;всех этапах жизненного цикла</li>
-                        <li>Взаимодействие с&nbsp;Подрядными организациями, ведение договоров, контроль выполнения
-                            работ
-                        </li>
-                        <li>Внедрение проектных и&nbsp;продуктовых практик для повышения эффективности процессов</li>
-                    </ul>
-                    <h2>Кого мы&nbsp;ищем</h2>
-                    <ul>
-                        <li>Участие в&nbsp;ИТ-проектах/продуктах в&nbsp;роли администратора и/или Менеджера
-                            проекта/продукта
-                        </li>
-                        <li>Реализация и&nbsp;контроль проектов/продуктов на&nbsp;всех этапах жизненного цикла</li>
-                        <li>Взаимодействие с&nbsp;Подрядными организациями, ведение договоров, контроль выполнения
-                            работ
-                        </li>
-                        <li>Внедрение проектных и&nbsp;продуктовых практик для повышения эффективности процессов</li>
-                    </ul>
-                    <h2>Что предлагаем</h2>
-                    <ul>
-                        <li>Официальное трудоустройство в&nbsp;стабильную аккредитованную ИТ-компанию</li>
-                        <li>Полностью белую, конкурентную заработную плату с&nbsp;ежегодной индексацией</li>
-                        <li>Расширенный социальный пакет: бесплатный фитнес-зал и&nbsp;ДМС в&nbsp;лучших московских
-                            клиниках с&nbsp;включенной стоматологией
-                        </li>
-                        <li>Современный офис в&nbsp;шаговой доступности от&nbsp;м. Румянцево со&nbsp;свободной и&nbsp;бесплатной
-                            парковкой;
-                        </li>
-                        <li>Пятидневная рабочая неделя с&nbsp;гибким началом дня. Гибридный формат работы (1&nbsp;день
-                            удаленки в&nbsp;неделю)
-                        </li>
-                    </ul>
-                </div>
+                {!! $vacancy->description !!}
             </div>
         </div>
     </article>
+
 
 
     <section class="vacancies-us">

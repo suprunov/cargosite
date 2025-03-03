@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateVacancyRequest;
 use App\Models\Vacancy;
 use App\Models\VacancyDirection;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\View\View;
 
 class VacancyController extends Controller
@@ -14,7 +15,7 @@ class VacancyController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request): View
+    public function index(Request $request): string
     {
         $perPage = 10;
 
@@ -44,7 +45,7 @@ class VacancyController extends Controller
             return view('pages.vacancies.list-item', compact('vacancyDirections'))->render();
         }
 
-        return view('pages.vacancies.index', compact('vacancyDirections'));
+        return view('pages.vacancies.index', compact('vacancyDirections'))->render();
     }
 
     /**
@@ -68,7 +69,18 @@ class VacancyController extends Controller
      */
     public function show(string $slug): View
     {
-        return view('pages.vacancies.vacancy', ['slug' => $slug]);
+        $vacancy = Vacancy::where('slug', $slug)
+            ->where('published', true)
+            ->whereDate('active_from', '<=', Carbon::now())
+            ->whereDate('active_to', '>=', Carbon::now())
+            ->with('skills')
+            ->first();
+
+        if (!$vacancy) {
+            abort(404);
+        }
+
+        return view('pages.vacancies.vacancy', compact('vacancy'));
     }
 
     /**
