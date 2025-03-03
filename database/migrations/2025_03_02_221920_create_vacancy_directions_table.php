@@ -12,7 +12,8 @@ return new class extends Migration {
     {
         Schema::create('vacancy_directions', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title')->unique();
+            $table->string('slug')->unique();
             $table->integer('sort')->default(500);
             $table->timestamps();
             $table->unsignedBigInteger('created_by')->nullable();

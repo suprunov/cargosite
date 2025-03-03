@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->string('title');
             $table->string('slug')->unique();
             $table->string('location')->nullable();
+            $table->string('place')->nullable();
             $table->unsignedInteger('salary')->nullable();
             $table->string('experience')->nullable();
             $table->text('description')->nullable();

@@ -32,6 +32,7 @@ class VacancyFactory extends Factory
             'title' => $title,
             'slug' => $this->faker->slug(),
             'location' => $this->faker->city(),
+            'place' => $this->faker->randomElement(['офис', 'удаленка', 'гибрид']),
             'salary' => $this->faker->randomNumber(1) * 15000 + 50000,
             'experience' => $this->faker->randomElement(['от 1 года', 'от 3 лет', 'можно без опыта']),
             'description' => $this->generateRandomHtmlDescription(),

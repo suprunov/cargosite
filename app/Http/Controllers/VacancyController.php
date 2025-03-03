@@ -5,15 +5,24 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreVacancyRequest;
 use App\Http\Requests\UpdateVacancyRequest;
 use App\Models\Vacancy;
+use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class VacancyController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request): string
     {
-        //
+        $perPage = 10;
+        $vacancies = Vacancy::orderBy('sort', 'asc')->paginate($perPage);
+
+        if ($request->ajax()) {
+            return view('pages.vacancies.index', compact('vacancies'))->render();
+        }
+
+        return view('pages.vacancies.index', compact('vacancies'));
     }
 
     /**
@@ -35,9 +44,9 @@ class VacancyController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Vacancy $vacancy)
+    public function show(string $slug): View
     {
-        //
+        return view('pages.vacancies.vacancy', ['slug' => $slug]);
     }
 
     /**

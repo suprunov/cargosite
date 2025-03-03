@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\VacancyController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'homeIndex'])->name('homeIndex');
@@ -21,5 +22,6 @@ Route::prefix('fuel')->group(function () {
 Route::get('/news', [PageController::class, 'newsIndex'])->name('newsIndex');
 Route::get('/policy', [PageController::class, 'policyIndex'])->name('policyIndex');
 Route::get('/suppliers', [PageController::class, 'suppliersIndex'])->name('suppliersIndex');
-Route::get('/vacancies', [PageController::class, 'vacanciesIndex'])->name('vacanciesIndex');
-Route::get('/vacancies/{slug}', [PageController::class, 'vacanciesVacancy'])->name('vacanciesVacancy');
+
+Route::get('/vacancies', [VacancyController::class, 'index'])->name('vacanciesIndex');
+Route::get('/vacancies/{slug}', [VacancyController::class, 'show'])->name('vacanciesVacancy');

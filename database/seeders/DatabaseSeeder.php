@@ -6,6 +6,7 @@ use App\Models\Skill;
 use App\Models\Vacancy;
 use App\Models\VacancyDirection;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -16,12 +17,22 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $directions = VacancyDirection::factory(5)->create();
+        $directions = collect([
+            'Автоматизация и IT',
+            'Продажи и маркетинг',
+            'Финансы и бухгалтерия',
+            'PR',
+        ])->map(function ($title) {
+            return VacancyDirection::create([
+                'title' => $title,
+                'slug' => Str::slug($title),
+            ]);
+        });
 
         $skills = Skill::factory(10)->create();
 
         foreach ($directions as $direction) {
-            $vacancies = Vacancy::factory(10)->create([
+            $vacancies = Vacancy::factory(rand(5, 25))->create([
                 'vacancy_direction_id' => $direction->id,
             ]);
 

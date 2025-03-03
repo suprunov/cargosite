@@ -76,10 +76,6 @@ class PageController extends Controller
         return view('pages.suppliers.index');
     }
 
-    public function vacanciesIndex(): View
-    {
-        return view('pages.vacancies.index');
-    }
 
     public function vacanciesVacancy(string $slug): View
     {
