@@ -23,12 +23,12 @@
                     </div>
                     <div class="content-hero__image">
                         <img
-                            src="/local/templates/main/assets/img/vacancies/hero.jpg"
+                            src="{{ Vite::image('vacancies/hero.jpg') }}"
                             alt=""
                             loading="lazy"
                             class="_desktop"
                         > <img
-                            src="/local/templates/main/assets/img/vacancies/hero-m.jpg"
+                            src="{{ Vite::image('vacancies/hero-m.jpg') }}"
                             alt=""
                             loading="lazy"
                             class="_mobile"
@@ -53,7 +53,7 @@
                                         <p class="vacancies-us__item-copy">Помогаем стать экспертами в&nbsp;нашей
                                             области</p>
                                         <div class="vacancies-us__item-image">
-                                            <img src="/local/templates/main/assets/img/vacancies/us-1.png" alt="">
+                                            <img src="{{ Vite::image('vacancies/us-1.png') }}" alt="">
                                         </div>
                                     </div>
                                 </article>
@@ -65,7 +65,7 @@
                                         <p class="vacancies-us__item-copy">Официальное трудоустройство с&nbsp;полностью
                                             белой зарплатой, включая премии</p>
                                         <div class="vacancies-us__item-image">
-                                            <img src="/local/templates/main/assets/img/vacancies/us-2.png" alt="">
+                                            <img src="{{ Vite::image('vacancies/us-2.png') }}" alt="">
                                         </div>
                                     </div>
                                 </article>
@@ -77,7 +77,7 @@
                                         <p class="vacancies-us__item-copy">90% руководителей выросли из&nbsp;рядовых
                                             сотрудников компании</p>
                                         <div class="vacancies-us__item-image">
-                                            <img src="/local/templates/main/assets/img/vacancies/us-3.png" alt="">
+                                            <img src="{{ Vite::image('vacancies/us-3.png') }}" alt="">
                                         </div>
                                     </div>
                                 </article>
@@ -89,7 +89,7 @@
                                         <p class="vacancies-us__item-copy">Ничего не&nbsp;скрываем, поэтому можете
                                             самостоятельно посчитать размер зарплаты</p>
                                         <div class="vacancies-us__item-image">
-                                            <img src="/local/templates/main/assets/img/vacancies/us-4.png" alt="">
+                                            <img src="{{ Vite::image('vacancies/us-4.png') }}" alt="">
                                         </div>
                                     </div>
                                 </article>

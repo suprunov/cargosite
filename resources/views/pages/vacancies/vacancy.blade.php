@@ -39,8 +39,7 @@
                 <p class="vacancy-item__header-info">
                     {{ $vacancy->location }} <i></i>
                     {{ $vacancy->salary ? $vacancy->salary . ' ₽' : 'з/п не указана' }} <i></i>
-                    <nobr>{{ $vacancy->experience }}</nobr>
-                    лет
+                    {{ $vacancy->experience }}
                 </p>
                 <p class="vacancy-item__header-cta">
                     <a href="#apply" class="btn-cta _min">Откликнуться</a>
