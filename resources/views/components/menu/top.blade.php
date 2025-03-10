@@ -14,20 +14,32 @@
                         @foreach($menuItem['groups'] as $group)
                             <div class="header__nav-sub-item">
                                 <div class="header__nav-sub-item-header">
-                                    {{ isset($group['route']) ? '<a href="' . route($group['route']) .'class="header__nav-sub-item-header-name">' : '#' }}route($group['route']) : '#' }}
-                                    <a href="{{ isset($group['route']) ? route($group['route']) : '#' }}" class="header__nav-sub-item-header-name">
-                                        <img src="{{ Vite::image("icons/menu/" . $group['icon']) }}" alt="">
-                                        {{ $group['title'] }}
-                                    </a>
+                                    @if(isset($group['route']))
+                                        <a href="{{ route($group['route']) }}" class="header__nav-sub-item-header-name">
+                                            <img src="{{ Vite::image("icons/menu/". $group['icon']) }}" alt="">
+                                            {{ $group['title'] }}
+                                        </a>
+                                    @else
+                                        <span class="header__nav-sub-item-header-name">
+                                            <img src="{{ Vite::image("icons/menu/" . $group['icon']) }}" alt="">
+                                            {{ $group['title'] }}
+                                        </span>
+                                    @endif
                                     <div class="header__nav-sub-item-header-label">{{ $group['subtitle'] }}</div>
                                 </div>
                                 @if(!empty($group['items']))
                                     <ul>
                                         @foreach($group['items'] as $item)
                                             <li>
-                                                <a href="{{ isset($item['route']) ? route($item['route']) : '#' }}">
-                                                    {{ $item['title'] }}
-                                                </a>
+                                                @if(isset($item['route']))
+                                                    <a href="{{ route($item['route']) }}">
+                                                        {{ $item['title'] }}
+                                                    </a>
+                                                @else
+                                                    <span>
+                                                        {{ $item['title'] }}
+                                                    </span>
+                                                @endif
                                             </li>
                                         @endforeach
                                     </ul>
@@ -38,9 +50,15 @@
                 </li>
             @else
                 <li class="header__nav-item-much">
-                    <a href="{{ isset($menuItem['route']) ? route($menuItem['route']) : '#' }}">
-                        {{ $menuItem['title'] }}
-                    </a>
+                    @if(isset($menuItem['route']))
+                        <a href="{{ route($menuItem['route']) }}">
+                            {{ $menuItem['title'] }}
+                        </a>
+                    @else
+                        <span>
+                            {{ $menuItem['title'] }}
+                        </span>
+                    @endif
                 </li>
             @endif
         @endforeach
