@@ -4,10 +4,10 @@
     <section class="home-intro">
         <div class="home-intro__inner">
             <video class="home-intro__back _desktop" muted autoplay loop playsinline inline>
-                <source src="video/home-intro.mp4" type="video/mp4">
+                <source src="{{ Vite::video('home-intro.mp4') }}" type="video/mp4">
             </video>
             <video class="home-intro__back _mobile" muted autoplay loop playsinline inline>
-                <source src="video/home-intro-m.mp4" type="video/mp4">
+                <source src="{{ Vite::video('home-intro-m.mp4') }}" type="video/mp4">
             </video>
             <div class="home-intro__folder">
                 <div class="home-intro__folder-body">
@@ -18,14 +18,6 @@
                         <a href="#apply" class="btn-cta">Снизить затраты</a>
                     </p>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section class="home-promo">
-        <div class="home-promo__inner">
-            <div class="home-promo__body">
-                <h2 class="home-promo__heading">Высокая конкуренция убивает тариф на&nbsp;перевозку, и, <strong>чтобы
-                        обеспечить прибыль в&nbsp;будущем, надо работать над эффективностью сейчас</strong></h2>
             </div>
         </div>
     </section>
@@ -50,10 +42,11 @@
                                     <div class="box-bottom__body home-services__item">
                                         <div class="home-services__item-top">
                                             <h3 class="home-services__item-heading"><img
-                                                    src="img/home/services-1.png" alt="" loading="lazy">Собственные
+                                                    src="{{ Vite::image('home/services-1.png') }}" alt=""
+                                                    loading="lazy">Собственные
                                                 сервисы</h3>
                                             <p class="home-services__item-copy">В&nbsp;состав Сargonomica входят
-                                                продукты для грузоперевозчиков: Страхование, Мониторнинг и&nbsp;покупка
+                                                продукты для грузоперевозчиков: Страхование, Мониторинг и&nbsp;покупка
                                                 техники. </p>
                                         </div>
                                         <div class="home-services__item-bottom">
@@ -73,7 +66,8 @@
                                     <div class="box-bottom__body home-services__item">
                                         <div class="home-services__item-top">
                                             <h3 class="home-services__item-heading"><img
-                                                    src="img/home/services-2.png" alt="" loading="lazy">Автоматизация
+                                                    src="{{ Vite::image('home/services-2.png') }}" alt=""
+                                                    loading="lazy">Автоматизация
                                                 автопарка</h3>
                                             <p class="home-services__item-copy">Cargo.Fuel оптимизирует маршруты с&nbsp;учетом
                                                 цен и&nbsp;ваших скидок на&nbsp;АЗС по&nbsp;пути следования</p>
@@ -95,7 +89,8 @@
                                     <div class="box-bottom__body home-services__item">
                                         <div class="home-services__item-top">
                                             <h3 class="home-services__item-heading"><img
-                                                    src="img/home/services-3.png" alt="" loading="lazy">Бесплатная
+                                                    src="{{ Vite::image('home/services-3.png') }}" alt=""
+                                                    loading="lazy">Бесплатная
                                                 система мониторинга </h3>
                                             <p class="home-services__item-copy">Управление автопарком и&nbsp;логистикой
                                                 происходит в&nbsp;одном приложении</p>
@@ -109,10 +104,11 @@
                                                     затраты</a></p>
                                         </div>
                                         <div class="home-services__item-image">
-                                            <img src="img/home/monitoring-map.png"
+                                            <img src="{{ Vite::image('home/monitoring-map.png') }}"
                                                  class="home-services__item-image-back" alt="">
                                             <div class="home-services__item-image-front"><img
-                                                    src="img/home/monitoring-screen.png" class="" alt=""></div>
+                                                    src="{{ Vite::image('home/monitoring-screen.png') }}" class=""
+                                                    alt=""></div>
                                         </div>
                                     </div>
                                 </article>
@@ -129,10 +125,11 @@
                                     <div class="box-bottom__body home-services__item">
                                         <div class="home-services__item-top">
                                             <h3 class="home-services__item-heading"><img
-                                                    src="img/home/services-1.png" alt="" loading="lazy">Собственные
+                                                    src="{{ Vite::image('home/services-1.png') }}" alt=""
+                                                    loading="lazy">Собственные
                                                 сервисы</h3>
                                             <p class="home-services__item-copy">В&nbsp;состав Сargonomica входят
-                                                продукты для грузоперевозчиков: Страхование, Мониторнинг и&nbsp;покупка
+                                                продукты для грузоперевозчиков: Страхование, Мониторинг и&nbsp;покупка
                                                 техники. </p>
                                         </div>
                                         <div class="home-services__item-bottom">
@@ -152,7 +149,8 @@
                                     <div class="box-bottom__body home-services__item">
                                         <div class="home-services__item-top">
                                             <h3 class="home-services__item-heading"><img
-                                                    src="img/home/services-2.png" alt="" loading="lazy">Автоматизация
+                                                    src="{{ Vite::image('home/services-2.png') }}" alt=""
+                                                    loading="lazy">Автоматизация
                                                 автопарка</h3>
                                             <p class="home-services__item-copy">Cargo.Fuel оптимизирует маршруты с&nbsp;учетом
                                                 цен и&nbsp;ваших скидок на&nbsp;АЗС по&nbsp;пути следования</p>
@@ -178,7 +176,8 @@
                                     <div class="box-bottom__body home-services__item">
                                         <div class="home-services__item-top">
                                             <h3 class="home-services__item-heading"><img
-                                                    src="img/home/services-2.png" alt="" loading="lazy">Автоматизация
+                                                    src="{{ Vite::image('home/services-2.png') }}" alt=""
+                                                    loading="lazy">Автоматизация
                                                 автопарка</h3>
                                             <p class="home-services__item-copy">Cargo.Fuel оптимизирует маршруты с&nbsp;учетом
                                                 цен и&nbsp;ваших скидок на&nbsp;АЗС по&nbsp;пути следования</p>
@@ -200,10 +199,11 @@
                                     <div class="box-bottom__body home-services__item">
                                         <div class="home-services__item-top">
                                             <h3 class="home-services__item-heading"><img
-                                                    src="img/home/services-1.png" alt="" loading="lazy">Собственные
+                                                    src="{{ Vite::image('home/services-1.png') }}" alt=""
+                                                    loading="lazy">Собственные
                                                 сервисы</h3>
                                             <p class="home-services__item-copy">В&nbsp;состав Сargonomica входят
-                                                продукты для грузоперевозчиков: Страхование, Мониторнинг и&nbsp;покупка
+                                                продукты для грузоперевозчиков: Страхование, Мониторинг и&nbsp;покупка
                                                 техники. </p>
                                         </div>
                                         <div class="home-services__item-bottom">
@@ -227,7 +227,8 @@
                                     <div class="box-bottom__body home-services__item">
                                         <div class="home-services__item-top">
                                             <h3 class="home-services__item-heading"><img
-                                                    src="img/home/services-3.png" alt="" loading="lazy">Бесплатная
+                                                    src="{{ Vite::image('home/services-3.png') }}" alt=""
+                                                    loading="lazy">Бесплатная
                                                 система мониторинга </h3>
                                             <p class="home-services__item-copy">Управление автопарком и&nbsp;логистикой
                                                 происходит в&nbsp;одном приложении</p>
@@ -241,10 +242,11 @@
                                                     затраты</a></p>
                                         </div>
                                         <div class="home-services__item-image">
-                                            <img src="img/home/monitoring-map.png"
+                                            <img src="{{ Vite::image('home/monitoring-map.png') }}"
                                                  class="home-services__item-image-back" alt="">
                                             <div class="home-services__item-image-front"><img
-                                                    src="img/home/monitoring-screen.png" class="" alt=""></div>
+                                                    src="{{ Vite::image('home/monitoring-screen.png') }}" class=""
+                                                    alt=""></div>
                                         </div>
                                     </div>
                                 </article>
@@ -262,7 +264,7 @@
                 <div class="home-ecosystem__list">
                     <article class="home-ecosystem__item _active">
                         <div class="home-ecosystem__item-heading">
-                            <img src="img/about/products-logo-5.svg" alt="">
+                            <img src="{{ Vite::image('about/products-logo-5.svg') }}" alt="">
                             Cargo.Journal
                         </div>
                         <div class="home-ecosystem__item-body">
@@ -271,13 +273,13 @@
                             <p class="home-ecosystem__item-link"><a href="#" target="_blank">Перейти
                                     к&nbsp;продукту</a></p>
                             <figure class="home-ecosystem__item-image">
-                                <img src="img/home/eco-journal.png" alt="">
+                                <img src="{{ Vite::image('home/eco-journal.png') }}" alt="">
                             </figure>
                         </div>
                     </article>
                     <article class="home-ecosystem__item">
                         <div class="home-ecosystem__item-heading">
-                            <img src="img/about/products-logo-4.svg" alt="">
+                            <img src="{{ Vite::image('about/products-logo-4.svg') }}" alt="">
                             Cargo.Insurance
                         </div>
                         <div class="home-ecosystem__item-body">
@@ -286,13 +288,13 @@
                             <p class="home-ecosystem__item-link"><a href="#" target="_blank">Перейти
                                     к&nbsp;продукту</a></p>
                             <figure class="home-ecosystem__item-image">
-                                <img src="img/home/eco-journal.png" alt="">
+                                <img src="{{ Vite::image('home/eco-journal.png') }}" alt="">
                             </figure>
                         </div>
                     </article>
                     <article class="home-ecosystem__item">
                         <div class="home-ecosystem__item-heading">
-                            <img src="img/about/products-logo-3.svg" alt="">
+                            <img src="{{ Vite::image('about/products-logo-3.svg') }}" alt="">
                             Cargo.Fuel
                         </div>
                         <div class="home-ecosystem__item-body">
@@ -301,20 +303,20 @@
                             <p class="home-ecosystem__item-link"><a href="#" target="_blank">Перейти
                                     к&nbsp;продукту</a></p>
                             <figure class="home-ecosystem__item-image">
-                                <img src="img/home/eco-journal.png" alt="">
+                                <img src="{{ Vite::image('home/eco-journal.png') }}" alt="">
                             </figure>
                         </div>
                     </article>
                     <article class="home-ecosystem__item">
                         <div class="home-ecosystem__item-heading">
-                            <img src="img/about/products-logo-8.svg" alt="">
+                            <img src="{{ Vite::image('about/products-logo-8.svg') }}" alt="">
                             В разработке
                         </div>
                         <div class="home-ecosystem__item-body">
                             <p class="home-ecosystem__item-copy">Медиа о&nbsp;том, как повысить эффективность
                                 управление логистикой и&nbsp;автопарком.</p>
                             <figure class="home-ecosystem__item-image">
-                                <img src="img/home/eco-journal.png" alt="">
+                                <img src="{{ Vite::image('home/eco-journal.png') }}" alt="">
                             </figure>
                         </div>
                     </article>
@@ -326,8 +328,8 @@
         <div class="home-reviews__inner">
             <h2 class="home-reviews__heading">Для всех, кто стремится<br> развивать бизнес</h2>
             <div class="home-reviews__badges">
-                <img src="img/home/badge-ya.svg" alt="Рейтинг Яндекса">
-                <img src="img/home/badge-flamp.svg" alt="Рейтинг Флампа">
+                <img src="{{ Vite::image('home/badge-ya.svg') }}" alt="Рейтинг Яндекса">
+                <img src="{{ Vite::image('home/badge-flamp.svg') }}" alt="Рейтинг Флампа">
             </div>
         </div>
         <div class="swiper">
@@ -335,7 +337,8 @@
                 <div class="swiper-slide">
                     <article class="home-reviews__item">
                         <div class="home-reviews__item-person">
-                            <img src="img/home/review.jpg" alt="" class="home-reviews__item-person-image">
+                            <img src="{{ Vite::image('home/review.jpg') }}" alt=""
+                                 class="home-reviews__item-person-image">
                             <h4 class="home-reviews__item-person-name">Виктор Лиев</h4>
                             <p class="home-reviews__item-person-pos">Логист CDEK</p>
                         </div>
@@ -350,7 +353,8 @@
                         <div class="popup__hidden">
                             <div class="home-reviews__full">
                                 <div class="home-reviews__item-person">
-                                    <img src="img/home/review.jpg" alt="" class="home-reviews__item-person-image">
+                                    <img src="{{ Vite::image('home/review.jpg') }}" alt=""
+                                         class="home-reviews__item-person-image">
                                     <h4 class="home-reviews__item-person-name">Виктор Лиев</h4>
                                     <p class="home-reviews__item-person-pos">Логист CDEK</p>
                                 </div>
@@ -372,7 +376,8 @@
                 <div class="swiper-slide">
                     <article class="home-reviews__item">
                         <div class="home-reviews__item-person">
-                            <img src="img/home/review.jpg" alt="" class="home-reviews__item-person-image">
+                            <img src="{{ Vite::image('home/review.jpg') }}" alt=""
+                                 class="home-reviews__item-person-image">
                             <h4 class="home-reviews__item-person-name">Виктор Лиев</h4>
                             <p class="home-reviews__item-person-pos">Логист CDEK</p>
                         </div>
@@ -387,7 +392,8 @@
                         <div class="popup__hidden">
                             <div class="home-reviews__full">
                                 <div class="home-reviews__item-person">
-                                    <img src="img/home/review.jpg" alt="" class="home-reviews__item-person-image">
+                                    <img src="{{ Vite::image('home/review.jpg') }}" alt=""
+                                         class="home-reviews__item-person-image">
                                     <h4 class="home-reviews__item-person-name">Виктор Лиев</h4>
                                     <p class="home-reviews__item-person-pos">Логист CDEK</p>
                                 </div>
@@ -409,7 +415,8 @@
                 <div class="swiper-slide">
                     <article class="home-reviews__item">
                         <div class="home-reviews__item-person">
-                            <img src="img/home/review.jpg" alt="" class="home-reviews__item-person-image">
+                            <img src="{{ Vite::image('home/review.jpg') }}" alt=""
+                                 class="home-reviews__item-person-image">
                             <h4 class="home-reviews__item-person-name">Виктор Лиев</h4>
                             <p class="home-reviews__item-person-pos">Логист CDEK</p>
                         </div>
@@ -424,7 +431,8 @@
                         <div class="popup__hidden">
                             <div class="home-reviews__full">
                                 <div class="home-reviews__item-person">
-                                    <img src="img/home/review.jpg" alt="" class="home-reviews__item-person-image">
+                                    <img src="{{ Vite::image('home/review.jpg') }}" alt=""
+                                         class="home-reviews__item-person-image">
                                     <h4 class="home-reviews__item-person-name">Виктор Лиев</h4>
                                     <p class="home-reviews__item-person-pos">Логист CDEK</p>
                                 </div>
@@ -446,7 +454,8 @@
                 <div class="swiper-slide">
                     <article class="home-reviews__item">
                         <div class="home-reviews__item-person">
-                            <img src="img/home/review.jpg" alt="" class="home-reviews__item-person-image">
+                            <img src="{{ Vite::image('home/review.jpg') }}" alt=""
+                                 class="home-reviews__item-person-image">
                             <h4 class="home-reviews__item-person-name">Виктор Лиев</h4>
                             <p class="home-reviews__item-person-pos">Логист CDEK</p>
                         </div>
@@ -461,7 +470,8 @@
                         <div class="popup__hidden">
                             <div class="home-reviews__full">
                                 <div class="home-reviews__item-person">
-                                    <img src="img/home/review.jpg" alt="" class="home-reviews__item-person-image">
+                                    <img src="{{ Vite::image('home/review.jpg') }}" alt=""
+                                         class="home-reviews__item-person-image">
                                     <h4 class="home-reviews__item-person-name">Виктор Лиев</h4>
                                     <p class="home-reviews__item-person-pos">Логист CDEK</p>
                                 </div>
@@ -512,7 +522,8 @@
                             <div class="form__submit">
                                 <button class="btn-cta" type="submit">Отправить</button>
                                 <p class="form__submit-agreement">Нажимая на&nbsp;кнопку «Отправить», вы&nbsp;принимаете
-                                    согласие на&nbsp;<a href="policy.html" target="_blank">обработку персональных
+                                    согласие на&nbsp;<a href="{{ route('homeIndex') }}" target="_blank">обработку
+                                        персональных
                                         данных</a></p>
                             </div>
                         </form>
@@ -600,24 +611,30 @@
                             </div>
                             <div class="form__submit">
                                 <button class="btn-cta" type="submit">Продолжить</button>
-                                <p class="form__submit-agreement">Нажимая на&nbsp;кнопку «<span
-                                        class="form__submit-agreement-btn">Продолжить</span>», вы&nbsp;принимаете
-                                    согласие на&nbsp;<a href="policy.html" target="_blank">обработку персональных
+                                <p class="form__submit-agreement">Нажимая на&nbsp;кнопку «
+                                    <span class="form__submit-agreement-btn">Продолжить</span>
+                                    », вы&nbsp;принимаете согласие на&nbsp;<a href="{{ route('homeIndex') }}"
+                                                                              target="_blank">обработку персональных
                                         данных</a></p>
                             </div>
                             <div class="form-apply__back">
-                                    <span class="form-apply__back-link"><svg xmlns="http://www.w3.org/2000/svg"
-                                                                             width="24" height="24" fill="none"
-                                                                             viewBox="0 0 24 24"><path fill="#20212B"
-                                                                                                       fill-rule="evenodd"
-                                                                                                       d="M13.09 5.777 7.527 11.34a.933.933 0 0 0 0 1.32l5.563 5.563 1.131-1.132L9.131 12l5.09-5.091-1.131-1.132Z"
-                                                                                                       clip-rule="evenodd" /></svg>Назад</span>
+                                    <span class="form-apply__back-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             width="24" height="24" fill="none"
+                                             viewBox="0 0 24 24">
+                                            <path fill="#20212B"
+                                                  fill-rule="evenodd"
+                                                  d="M13.09 5.777 7.527 11.34a.933.933 0 0 0 0 1.32l5.563 5.563 1.131-1.132L9.131 12l5.09-5.091-1.131-1.132Z"
+                                                  clip-rule="evenodd" />
+                                        </svg>
+                                        Назад
+                                    </span>
                             </div>
                         </div>
                     </form>
                     <div class="home-apply__image">
                         <video muted autoplay loop playsinline inline>
-                            <source src="video/home-intro-m.mp4" type="video/mp4">
+                            <source src="{{ Vite::video('home-intro-m.mp4') }}" type="video/mp4">
                         </video>
                     </div>
                 </div>

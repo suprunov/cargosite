@@ -62,36 +62,36 @@
                 </li>
             @endif
         @endforeach
-            <li class="header__nav-item-sub header__nav-item-more">
-                <div class="header__nav-label">Еще<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#20212B" stroke-width="1.06667" d="m5.172 7.333 2.78 2.782a.067.067 0 0 0 .095 0l2.781-2.782"/></svg></div>
-                <div class="header__nav-sub">
-                    <div class="header__nav-sub-item _simple">
-                        <div class="header__nav-sub-item-header">
-                            <a href="about.html" class="header__nav-sub-item-header-name">
-                                О компании
-                            </a>
-                        </div>
-                        <ul>
-                            <li><a href="#">Подход</a></li>
-                            <li><a href="#">История</a></li>
-                            <li><a href="#">Структура</a></li>
-                        </ul>
-                    </div>
-                    <div class="header__nav-sub-item _simple">
-                        <div class="header__nav-sub-item-header">
-                            <a href="contacts.html" class="header__nav-sub-item-header-name">
-                                Контакты
-                            </a>
-                        </div>
-                        <ul>
-                            <li><a href="#">Сервисы</a></li>
-                            <li><a href="#">Отделы</a></li>
-                            <li><a href="#">Техподдержка</a></li>
-                            <li><a href="#">PR</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
+{{--            <li class="header__nav-item-sub header__nav-item-more">--}}
+{{--                <div class="header__nav-label">Еще<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#20212B" stroke-width="1.06667" d="m5.172 7.333 2.78 2.782a.067.067 0 0 0 .095 0l2.781-2.782"/></svg></div>--}}
+{{--                <div class="header__nav-sub">--}}
+{{--                    <div class="header__nav-sub-item _simple">--}}
+{{--                        <div class="header__nav-sub-item-header">--}}
+{{--                            <a href="about.html" class="header__nav-sub-item-header-name">--}}
+{{--                                О компании--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+{{--                        <ul>--}}
+{{--                            <li><a href="#">Подход</a></li>--}}
+{{--                            <li><a href="#">История</a></li>--}}
+{{--                            <li><a href="#">Структура</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                    <div class="header__nav-sub-item _simple">--}}
+{{--                        <div class="header__nav-sub-item-header">--}}
+{{--                            <a href="contacts.html" class="header__nav-sub-item-header-name">--}}
+{{--                                Контакты--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+{{--                        <ul>--}}
+{{--                            <li><a href="#">Сервисы</a></li>--}}
+{{--                            <li><a href="#">Отделы</a></li>--}}
+{{--                            <li><a href="#">Техподдержка</a></li>--}}
+{{--                            <li><a href="#">PR</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </li>--}}
 {{--        todo: сделать через класс компонента--}}
     </ul>
 </nav>
