@@ -1,39 +1,170 @@
-@@include('modules/__header.html',{
-	"isIndex": false,
-	"isAuthed": false,
-	"isInner": "e404",
-	"bodyClass": "page-404",
-	"headerClass": ""
-})
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Карго.лизинг</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f7;
+            margin: 0;
+            padding: 20px;
+        }
 
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
+        .left-column {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+        }
 
-<section class="content-hero e404">
-	<div class="folder-white"><div class="folder-white__body">
-		<div class="content-hero__inner">
-			<div class="content-hero__body">
-				<h1 class="content-hero__heading">Страница не&nbsp;найдена</h1>
-				<p class="content-hero__copy">Мы&nbsp;приложим все усилия, чтобы ее&nbsp;вернуть, а&nbsp;пока можете вернуться на&nbsp;главную страницу.</p>
-				<p class="content-hero__cta">
-					<a href="home.html" class="btn-cta">Вернуться на&nbsp;главную</a>
-				</p>
-			</div>
-			<div class="content-hero__image"><img src="img/404.jpg" alt="" loading="lazy"></div>
-		</div>
-	</div></div>
-</section>
+        .left-column h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #222;
+        }
 
+        .partners {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
 
+        .partner-logo {
+            background-color: #f5f5f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            font-size: 14px;
+            color: #333;
+            border: 1px solid #ddd;
+        }
 
-@@include('modules/__footer.html',{
-	"isIndex": false,
-	"isAuthed": false,
-	"isInner": "e404",
-	"footerClass": ""
-})
+        .person {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-@@include('modules/__burger-menu.html',{
-	"isIndex": false,
-	"isAuthed": false,
-	"isInner": "e404"
-})
+        .person img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .quote {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .right-column {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .stat-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-card h3 {
+            font-size: 16px;
+            margin: 0 0 5px;
+            color: #222;
+        }
+
+        .stat-card p {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .small-text {
+            font-size: 12px;
+            color: #777;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-column">
+        <h2>Карго.лизинг</h2>
+        <p>официальный партнёр проверенных производителей</p>
+
+        <div class="partners">
+            <div class="partner-logo">WAGNERMAIER</div>
+            <div class="partner-logo">Helfimmer</div>
+            <div class="partner-logo">Schmitz Cargobull</div>
+            <div class="partner-logo">KAMA TYRES</div>
+        </div>
+
+        <div class="person">
+            <img alt="Фото" src="https://via.placeholder.com/50">
+            <div>
+                <strong>Рустам Субханкулов</strong><br>
+                Исполнительный директор «WAGNERMAIER РУСЛАНД»
+            </div>
+        </div>
+        <p class="quote">
+            «КАРГО.ЛИЗИНГ» — ЛУЧШИЙ И НАДЁЖНЫЙ ПАРТНЕР ПО ПРОДАЖЕ ПОЛУПРИЦЕПОВ МАРКИ WAGNERMAIER
+        </p>
+    </div>
+
+    <div class="right-column">
+        <div class="stat-card">
+            <h3>Рейтинг Эксперт RA</h3>
+            <p>30 место</p>
+            <div class="small-text">среди всех лизинговых компаний РФ в сегменте грузовых автомобилей</div>
+        </div>
+
+        <div class="stat-card">
+            <h3>Действующий арендный парк</h3>
+            <p>1 215</p>
+            <div class="small-text">тягачей и полуприцепов</div>
+        </div>
+
+        <div class="stat-card">
+            <h3>Количество техники, переданной клиентам</h3>
+            <p>3 726</p>
+            <div class="small-text">тягачей и полуприцепов</div>
+        </div>
+
+        <div class="stat-card">
+            <h3>Количество шин, переданных клиентам</h3>
+            <p>5 791</p>
+            <div class="small-text">за 2024 год, в беспроцентную рассрочку</div>
+        </div>
+
+        <div class="stat-card">
+            <h3>Покупает повторно</h3>
+            <p>68,5%</p>
+            <div class="small-text">клиентов, которые покупают технику в Карго.Лизинг ежегодно</div>
+        </div>
+
+        <div class="stat-card">
+            <h3>Компания успешно существует</h3>
+            <p>6</p>
+            <div class="small-text">лет на рынке</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

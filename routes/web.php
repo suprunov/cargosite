@@ -23,5 +23,20 @@ Route::get('/news', [PageController::class, 'newsIndex'])->name('newsIndex');
 Route::get('/policy', [PageController::class, 'policyIndex'])->name('policyIndex');
 Route::get('/suppliers', [PageController::class, 'suppliersIndex'])->name('suppliersIndex');
 
+
 Route::get('/vacancies', [VacancyController::class, 'index'])->name('vacanciesIndex');
 Route::get('/vacancies/{slug}', [VacancyController::class, 'show'])->name('vacanciesVacancy');
+
+
+Route::get('/leasing', [VacancyController::class, 'index'])->name('leasing');
+Route::get('/leasing-semitrailers', [VacancyController::class, 'index'])->name('leasingSemitrailers');
+Route::get('/leasingOperatingLease', [VacancyController::class, 'index'])->name('leasingOperatingLease');
+Route::get('/leasingTires', [VacancyController::class, 'index'])->name('leasingTires');
+Route::get('/fuel', [VacancyController::class, 'index'])->name('fuel');
+Route::get('/vacancies', [VacancyController::class, 'index'])->name('vacancies');
+Route::get('/vacancyItem', [VacancyController::class, 'index'])->name('vacancyItem');
+Route::get('/about', [VacancyController::class, 'index'])->name('about');
+Route::get('/contacts', [VacancyController::class, 'index'])->name('contacts');
+Route::get('/documents', [VacancyController::class, 'index'])->name('documents');
+Route::get('/suppliers', [VacancyController::class, 'index'])->name('suppliers');
+

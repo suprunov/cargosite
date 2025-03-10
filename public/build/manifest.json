@@ -336,11 +336,11 @@
     "src": "resources/img/fuel/services/list-6.jpg"
   },
   "resources/img/header-fuel.svg": {
-    "file": "assets/header-fuel-CCpSv-Cq.svg",
+    "file": "assets/fuel-CCpSv-Cq.svg",
     "src": "resources/img/header-fuel.svg"
   },
   "resources/img/header-pricep.svg": {
-    "file": "assets/header-pricep-BkUF8968.svg",
+    "file": "assets/ppricep-BkUF8968.svg",
     "src": "resources/img/header-pricep.svg"
   },
   "resources/img/header-used.svg": {
@@ -446,6 +446,18 @@
   "resources/img/icons/marker.svg": {
     "file": "assets/marker-BUP1eFf-.svg",
     "src": "resources/img/icons/marker.svg"
+  },
+  "resources/img/icons/menu/career.svg": {
+    "file": "assets/fuel-CCpSv-Cq.svg",
+    "src": "resources/img/header-fuel.svg"
+  },
+  "resources/img/icons/menu/fuel.svg": {
+    "file": "assets/fuel-CCpSv-Cq.svg",
+    "src": "resources/img/header-fuel.svg"
+  },
+  "resources/img/icons/menu/ppricep.svg": {
+    "file": "assets/ppricep-BkUF8968.svg",
+    "src": "resources/img/header-pricep.svg"
   },
   "resources/img/icons/new-window.svg": {
     "file": "assets/new-window-CPoiWkyb.svg",
